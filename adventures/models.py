@@ -74,3 +74,10 @@ class Adventure(models.Model):
         default='none'
     )
     description = models.TextField(blank=True)
+
+    class Meta:
+        """Order adventures by most recent first"""
+        ordering = ['-updated_on']
+
+    def __str__(self):
+        return f'{self.id} {self.title}'
