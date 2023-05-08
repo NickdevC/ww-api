@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from adventures.models import Adventure
+from .models import Adventure
 
 
 class AdventureSerializer(serializers.ModelSerializer):
