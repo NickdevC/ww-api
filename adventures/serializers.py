@@ -1,12 +1,14 @@
 from rest_framework import serializers
-from .models import Adventure
+from adventures.models import Adventure
 
 
 class AdventureSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
-    profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
+    profile_image = serializers.ReadOnlyField(
+        source='owner.profile.profile_image.url'
+    )
 
     def validate_image(self, value):
         if value.size > 1024 * 1024 * 2:

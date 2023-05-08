@@ -7,7 +7,7 @@ from .serializers import AdventureSerializer
 
 class AdventureList(APIView):
     serializer_class = AdventureSerializer
-    
+
     def get(self, request):
         adventures = Adventure.objects.all()
         serializer = AdventureSerializer(
