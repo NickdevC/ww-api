@@ -58,7 +58,7 @@ class Adventure(models.Model):
         default='none'
     )
     terrain_challenge = models.CharField(
-        max_length=8,
+        max_length=30,
         choices=terrain_challenge_choices,
         default='none'
     )
@@ -68,7 +68,7 @@ class Adventure(models.Model):
         default='none'
     )
     duration = models.CharField(
-        max_length=8,
+        max_length=20,
         choices=duration_choices,
         default='none'
     )
@@ -76,7 +76,7 @@ class Adventure(models.Model):
 
     class Meta:
         """Order adventures by most recent first"""
-        ordering = ['-updated_on']
+        ordering = ['-updated_at']
 
     def __str__(self):
         return f'{self.id} {self.title}'
