@@ -15,7 +15,12 @@ class ProfileList(APIView):
 
 
 class ProfileDetail(APIView):
+    """
+    Retrives specific profile details and allows user
+    to edit profile information.
+    """
     serializer_class = ProfileSerializer
+    
     def get_object(self, pk):
         try:
             profile = Profile.objects.get(pk=pk)
