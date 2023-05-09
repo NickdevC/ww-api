@@ -32,8 +32,9 @@ class AdventureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Adventure
         fields = [
-            'id', 'owner', 'created_at', 'updated_at',
+            'id', 'owner', 'is_owner', 'profile_id',
+            'profile_image', 'created_at', 'updated_at',
             'title', 'subheading', 'location', 'post_image',
             'family_friendly', 'all_weather', 'terrain_challenge',
-            'cost', 'duration', 'description',
+            'cost', 'duration', 'description', 
         ]

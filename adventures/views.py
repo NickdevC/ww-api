@@ -8,7 +8,6 @@ from ww_api.permissions import IsOwnerOrReadOnly
 
 class AdventureList(APIView):
     serializer_class = AdventureSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get(self, request):
         adventures = Adventure.objects.all()
@@ -17,7 +16,7 @@ class AdventureList(APIView):
         )
         return Response(serializer.data)
     
-    def adventure(self, request):
+    def post(self, request):
         serializer = AdventureSerializer(
             data=request.data, context={'request': request}
         )
