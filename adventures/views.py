@@ -57,3 +57,15 @@ class AdventureDetail(APIView):
             adventure, context={'request': request}
         )
         return Response(serializer.data)
+
+    def put(self, request, pk):
+        adventure = self.get_object(pk)
+        serializer = AdventureSerializer(
+            adventure, data=request.data, context={'request': request}
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(
+            serializer.errors, status=status.HTTP_400_BAD_REQUEST
+        )
