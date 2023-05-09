@@ -8,6 +8,9 @@ from ww_api.permissions import IsOwnerOrReadOnly
 
 class AdventureList(APIView):
     serializer_class = AdventureSerializer
+    permission_classes = [
+        permissions.IsAuthenticatedOrReadOnly
+    ]
 
     def get(self, request):
         adventures = Adventure.objects.all()
