@@ -69,3 +69,10 @@ class AdventureDetail(APIView):
         return Response(
             serializer.errors, status=status.HTTP_400_BAD_REQUEST
         )
+    
+    def delete(self, request, pk):
+        adventure = self.get_object(pk)
+        adventure.delete()
+        return Response(
+            status=status.HTTP_204_NO_CONTENT
+        )
