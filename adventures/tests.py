@@ -42,3 +42,8 @@ class AdventureDetailViewTests(APITestCase):
     def test_cannot_retrieve_post_using_invalid_valid_id(self):
         response = self.client.get('/adventures/50/')
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+    def test_user_cannot_update_another_users_post(self):
+        self.client.login(username='nick', password='pass')
+        response = self.client.put('/adventures/2/', {'title': 'a new title'})
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
