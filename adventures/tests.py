@@ -29,7 +29,9 @@ class AdventureDetailViewTests(APITestCase):
             owner=nick, title='a test title', description='nicks content'
         )
         Adventure.objects.create(
-            owner=chloe, title='another test title', description='chloes content'
+            owner=chloe,
+            title='another test title',
+            description='chloes content'
         )
     
     def test_can_retrieve_post_using_valid_id(self):
