@@ -15,10 +15,7 @@ class AdventureListViewsTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         print(response.data)
         print(len(response.data))
-    
-    def test_logged_in_user_can_create_post(self):
-        self.client.login(username='nick', password='pass')
+
+    def test_user_not_logged_in_cant_create_post(self):
         response = self.client.post('/adventures/', {'title': 'a test title'})
-        count = Adventure.objects.count()
-        self.assertEqual(count, 1)
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
