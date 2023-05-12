@@ -3,6 +3,7 @@ from .models import Adventure
 
 
 class AdventureSerializer(serializers.ModelSerializer):
+    """Serializer for the Adventure model"""
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
