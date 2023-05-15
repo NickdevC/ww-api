@@ -14,9 +14,10 @@ class FavouriteSerializer(serializers.ModelSerializer):
         ]
     
     def create(self, validated_data):
+        """Checks for duplicate favourites and raises error"""
         try:
             return super().create(validated_data)
-        except:
+        except IntegrityError:
             raise serialziers.ValidationError({
                 'detail': 'possible duplicate'
             })
