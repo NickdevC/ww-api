@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'adventures',
     'comments',
     'favourites',
+    'followers',
 ]
 
 MIDDLEWARE = [
