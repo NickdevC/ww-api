@@ -21,3 +21,10 @@ class FavouriteSerializer(serializers.ModelSerializer):
             raise serialziers.ValidationError({
                 'detail': 'possible duplicate'
             })
+
+
+class FavouriteDetailSerializer(FavouriteSerializer):
+    """Serializer for the Favourite model used in Detail view.
+    Post is a read only field so that we dont have to set it on each update
+    """
+    favourite = serializers.ReadOnlyField(source='favourite.id')
