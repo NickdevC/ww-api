@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from ww_api.permissions import IsOwnerOrReadOnly
 from .models import Favourite
-from .serializers import FavouriteSerializer
+from .serializers import FavouriteSerializer, FavouriteDetailSerializer
 
 
 class FavouriteList(generics.ListCreateAPIView):

@@ -1,16 +1,16 @@
 from django.db import IntegrityError
 from rest_framework import serializers
-from save.models import Favourite
+from favourites.models import Favourite
 
 
 class FavouriteSerializer(serializers.ModelSerializer):
     """Serializer for the Favourite model"""
-    owner = serialziers.ReadOnlyField(source='owner.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
         model = Favourite
         fields = [
-            'id', 'owner', 'created_on', 'adventure_post',
+            'id', 'owner', 'created_at', 'adventure_post', 'favourite',
         ]
     
     def create(self, validated_data):
@@ -18,7 +18,7 @@ class FavouriteSerializer(serializers.ModelSerializer):
         try:
             return super().create(validated_data)
         except IntegrityError:
-            raise serialziers.ValidationError({
+            raise serializers.ValidationError({
                 'detail': 'possible duplicate'
             })
 
