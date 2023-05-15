@@ -10,7 +10,7 @@ class FavouriteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Favourite
         fields = [
-            'id', 'owner', 'created_at', 'adventure_post', 'favourite',
+            'id', 'owner', 'created_at', 'adventure_post',
         ]
     
     def create(self, validated_data):
@@ -21,10 +21,3 @@ class FavouriteSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({
                 'detail': 'possible duplicate'
             })
-
-
-class FavouriteDetailSerializer(FavouriteSerializer):
-    """Serializer for the Favourite model used in Detail view.
-    Post is a read only field so that we dont have to set it on each update
-    """
-    favourite = serializers.ReadOnlyField(source='favourite.id')

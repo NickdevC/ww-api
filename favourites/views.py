@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from ww_api.permissions import IsOwnerOrReadOnly
 from .models import Favourite
-from .serializers import FavouriteSerializer, FavouriteDetailSerializer
+from .serializers import FavouriteSerializer
 
 
 class FavouriteList(generics.ListCreateAPIView):
@@ -15,5 +15,5 @@ class FavouriteList(generics.ListCreateAPIView):
 
 class FavouriteDetail(generics.RetrieveDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
-    serializer_class = FavouriteDetailSerializer
+    serializer_class = FavouriteSerializer
     queryset = Favourite.objects.all()
