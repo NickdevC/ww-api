@@ -12,6 +12,8 @@ class AdventureSerializer(serializers.ModelSerializer):
         source='owner.profile.profile_image.url'
     )
     favourite_id = serializers.SerializerMethodField()
+    favourites_count = serializers.ReadOnlyField()
+    comments_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         if value.size > 1024 * 1024 * 2:
@@ -49,4 +51,5 @@ class AdventureSerializer(serializers.ModelSerializer):
             'title', 'subheading', 'location', 'post_image',
             'family_friendly', 'all_weather', 'terrain_challenge',
             'cost', 'duration', 'description', 'favourite_id',
+            'favourites_count', 'comments_count',
         ]
