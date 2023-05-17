@@ -1,5 +1,12 @@
 <h1 align="center">Weekend Warrior (API)</h1>
 
+<p align="center">This repository forms the API aspect of my wider 'Weekend Warriors' site. This README contains all the relevent information pertaining to the planning, structure and functionality of the back-end API. Please use the links below to navigate to other relevant sections of the project itself:<p>
+
+[Deployed API Site](https://weekend-warrior-api.herokuapp.com)
+
+[Deployed Site]()
+
+[Front-end Repository]()
 
 
 ## Contents
@@ -15,7 +22,10 @@
 
 # Purpose
 
-[Deployed API Site](https://weekend-warrior-api.herokuapp.com)
+The purpose of [the Weekend Warrior API](https://weekend-warrior-api.herokuapp.com) is to provide a back-end interface for managing user input from the main front-end site. To this end, the API is responsible for creating, storing, updating and filtering user data, with the overall goal of making sure the Weekend Warrior site delivers on it's core functionality as a social media hub. By it's nature, Weekend Warrior will only be successful if the user is able to quickly navigate and seamlessly interact with the functionality of the site - it is vital therefore that the API is designed to fit the audiences' needs.
+  
+The API allows users to register an account, and in doing so create a unique profile that they are then able to edit. They can also view others' profiles and choose to follow/unfollow other users (a standard practise with social media sites). In addition to this, once authenticated, users are able to **post** their recent 'adventures', **comment** on others' posts and also **favourite** posts so that they can easily access them at a later date.
+
 
 # Database Schema
 
