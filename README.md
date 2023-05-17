@@ -101,20 +101,37 @@ Using [DrawSQL](https://drawsql.app/) I was able to carefully plan out my databa
 # Technologies Used 
 
 ## Languages
+  
+The main language used was **python**, mainly due to the fact that the project utilised Django Rest Framework. 
 
 ## Modules
+  
+![](assets/modules_list.png)
 
 ## Frameworks/Libraries
+  
+- Django Rest Framework
+- Django Cloudinary Storage
+- Django Rest Auth
+- PostgreSQL
+- Pillow
+- Corsheaders
 
 ## Platforms
+  
+- Github
+- Gitpod
+- Cloudinary
+- Heroku
+- ElephantSQL
 
 ## Other Resources
+  
+- DrawSQL
 
 [Return to contents](#contents)
 
-
-
-
+---
 
 # Deployment
 
