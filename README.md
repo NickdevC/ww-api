@@ -8,7 +8,8 @@
 
 [Front-end Repository]()
 
-
+---
+  
 ## Contents
 
 *  [Purpose](#purpose)
@@ -20,39 +21,53 @@
 *  [Deployment](#deployment)
 *  [Credits](#credits)
 
+---
+  
 # Purpose
 
 The purpose of [the Weekend Warrior API](https://weekend-warrior-api.herokuapp.com) is to provide a back-end interface for managing user input from the main front-end site. To this end, the API is responsible for creating, storing, updating and filtering user data, with the overall goal of making sure the Weekend Warrior site delivers on it's core functionality as a social media hub. By it's nature, Weekend Warrior will only be successful if the user is able to quickly navigate and seamlessly interact with the functionality of the site - it is vital therefore that the API is designed to fit the audiences' needs.
   
 The API allows users to register an account, and in doing so create a unique profile that they are then able to edit. They can also view others' profiles and choose to follow/unfollow other users (a standard practise with social media sites). In addition to this, once authenticated, users are able to **post** their recent 'adventures', **comment** on others' posts and also **favourite** posts so that they can easily access them at a later date.
 
+---
+  
+# Database Schema 
 
-# Database Schema
-
+Using [DrawSQL](https://drawsql.app/) I was able to carefully plan out my database structure, and ensure that I had considered the relationships between them. 
+  
+![](assets/database_schema.png)
 
 
 [Return to contents](#contents)
+  
+---
 
 # Models
 
 ## Profile
 
+![](assets/drf_profiles.png)
 
 ## Adventure
 
+![](assets/drf_adventures.png)
 
 ## Comment
 
+![](assets/drf_comments.png)
 
 ## Followers
-
+  
+![](assets/drf_followers.png)
 
 ## Favourites
-
+  
+![](assets/drf_favourites.png)
+  
+  
 [Return to contents](#contents)
 
-
-
+---
 
 # Testing
 
@@ -86,20 +101,37 @@ The API allows users to register an account, and in doing so create a unique pro
 # Technologies Used 
 
 ## Languages
+  
+The main language used was **python**, mainly due to the fact that the project utilised Django Rest Framework. 
 
 ## Modules
+  
+![](assets/modules_list.png)
 
 ## Frameworks/Libraries
+  
+- Django Rest Framework
+- Django Cloudinary Storage
+- Django Rest Auth
+- PostgreSQL
+- Pillow
+- Corsheaders
 
 ## Platforms
+  
+- Github
+- Gitpod
+- Cloudinary
+- Heroku
+- ElephantSQL
 
 ## Other Resources
+  
+- DrawSQL
 
 [Return to contents](#contents)
 
-
-
-
+---
 
 # Deployment
 
