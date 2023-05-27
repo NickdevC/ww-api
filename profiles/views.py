@@ -41,11 +41,11 @@ class ProfileDetail(generics.RetrieveUpdateAPIView):
     """
     Retrieve or update a profile if user is the owner.
     """
-    permission_classes = [IsOwnerOrReadOnly]
+    permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
     queryset = Profile.objects.annotate(
         adventures_count=Count('owner__adventure', distinct=True),
         followers_count=Count('owner__followed', distinct=True),
         following_count=Count('owner__following', distinct=True)
     ).order_by('-created_at')
     serializer_class = ProfileSerializer
-    queryset = Profile.objects.all()
+    # queryset = Profile.objects.all()
