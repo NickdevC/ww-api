@@ -86,8 +86,11 @@ Following the CI tutorial (moments), I was able to create a run tests pertaining
 ## Manual Tests
   
 Throughout the development process, I continued to test the data being presented in the api, using a mixture of the Django Rest Framework interface and the deployed api url links.
-  
 
+Example of the routine outputs I was inspecting:
+![](assets/api_profiles_url.png)
+
+I also ensured that the api fulfilled all the CRUD functionaility necessary for my app:  
 
 | App/feature | Create| Read | Edit | Delete |
 | ------ | ------ | ------ | ------ | ------ |
@@ -108,10 +111,13 @@ Using the PEP8 validator plugin in Gitpod, I was able to identify any syntax iss
 
 
 # Bugs
+  
+Whilst most bugs were minor and fixed on an ad-hoc basis, there were two bugs that persisted through to deployment and I have outlined these below:
 
-| Description | Solution |
-| ----- | ------- |
-| [#1](https://github.com/NickdevC/Home-Learning-Hub/issues/21#issue-1574485639) | Choices within a CharField were rendering as numerical values rather than strings |
+| Location | Description | Solution |
+| ------ | ------ | ------ |
+| 'adventures' app > tests.py | `test_logged_in_user_can_create_post` continued to return with: `AssertionError: 0!=1` | I tried to alter the code to ensure the `self.assertEqual` count returned the desired value, but was unsuccessful. Having spoken to tutor support, it was deemed an anomaly and I was informed to ignore the error. |
+| 'adventures' app > tests.py | `test_user_can_update_own_post` returned: `AssertionError: 'a test title' != 'a new title'` | Again, tutor support informed me to leave the error and move on. |
 
 
 [Return to contents](#contents)
@@ -213,15 +219,15 @@ In the Deploy tab:
 
 ## Websites
 
-* [Pixabay](https://pixabay.com/users/elf-moondance-19728901/) - images by artist Elf-Moondance
+* [DrawSQL](https://drawsql.app/) - used for creating the model schemas.
 
 
 ## Acknowledgements
 
-* The Code Institute walkthrough projects 'Hello Django' and 'I Think Therfor I Blog' for providing some structure and direction for my personal project.
-* A special mention to my mentor Martina Terlevic who has accomodated me along the way, supporting with queries 'on the fly' and providing invaluable guidance during project milestone meetings. 
-* I have enormous gratitude for the patience, and experience offered by tutor support members: Oisin, Rebecca and Martin. All three helped me work through problems systematically and those processes themselves taught me a great deal with regards to debugging and **reading** code.
-* I also want to thank [Chris.F](https://github.com/Chrisfaherty) and [Chris.B](https://github.com/Christoph33one) (fellow Code Institute students). By joining together and engaging in remote study sessions your conversation and input kept me on track and motivated to push myself with regards to the project. By regularly talking through our code, I'd like to think we replicated as much of the 'agile' process as we could!
+* The Code Institute walkthrough projects for providing structure and direction for my personal project.
+* My mentor Martina Terlevic who has accomodated me along the way, supporting with queries 'on the fly' and providing invaluable guidance during project milestone meetings. 
+* CI tutor support for helping with some early dependency issues (a fair amount of tweking was required before I could get off the ground).
+* I also want to thank [Chris.F](https://github.com/Chrisfaherty) and [Chris.B](https://github.com/Christoph33one) (fellow Code Institute students). By joining together and engaging in remote study sessions your conversation and input kept me on track and motivated to push myself with regards to the project. Your advice and constructive questions kept me in check!
 
 
 [Return to contents](#contents)
