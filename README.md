@@ -73,14 +73,35 @@ Using [DrawSQL](https://drawsql.app/) I was able to carefully plan out my databa
 
 ## Unit Tests
 
-## Manual Tests
+Following the CI tutorial (moments), I was able to create a run tests pertaining to my "adventures" model. All tests passed, aside from two anomalies (both of which were confirmed by tutor support as things that could be left). **Please see the 'Bugs' section to see these errors in more detail.**
 
-| Feature | User Action| Expected Outcome | Pass? |
-| ----- | -------- | ------- | ------- |
-| Homepage | View the site's purpose | Users should be presented with text and imagery to help explain the purposes of the site | PASS |
+### Adventure Detail View 
+  
+![](assets/adventures_detail_test.png)
+
+### Adventure List View
+  
+![](assets/adventure_list_test.png)
+
+## Manual Tests
+  
+Throughout the development process, I continued to test the data being presented in the api, using a mixture of the Django Rest Framework interface and the deployed api url links.
+  
+
+
+| App/feature | Create| Read | Edit | Delete |
+| ------ | ------ | ------ | ------ | ------ |
+| profiles | PASS | PASS | PASS | PASS |
+| adventures | PASS | PASS | PASS | PASS |
+| comments | PASS | PASS | PASS | PASS |
+| followers | PASS | PASS | PASS | N/A |
+| favourites | PASS | PASS | PASS | N/A |
+
 
 ## Validator Tests
 
+Using the PEP8 validator plugin in Gitpod, I was able to identify any syntax issues. The only remaining error is a 'line length' error linked to code in the env.py file which could not be altered.
+  
 [Return to contents](#contents)
 
 
