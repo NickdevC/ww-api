@@ -1,5 +1,7 @@
 <h1 align="center">Weekend Warrior (API)</h1>
 
+![](assets/api_welcome.png)
+
 <p align="center">This repository forms the API aspect of my wider 'Weekend Warrior' app. This README contains all the relevent information pertaining to the planning, structure and functionality of the back-end API. Please use the links below to navigate to other relevant sections of the project itself:<p>
 
 [Deployed API Site](https://weekend-warrior-api.herokuapp.com)
