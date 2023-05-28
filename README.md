@@ -4,9 +4,9 @@
 
 [Deployed API Site](https://weekend-warrior-api.herokuapp.com)
 
-[Deployed Site]()
+[Deployed Site](https://weekend-warrior-nickdevc.herokuapp.com)
 
-[Front-end Repository]()
+[Front-end Repository](https://github.com/NickdevC/weekend-warrior-nickdevc/)
 
 ---
   
