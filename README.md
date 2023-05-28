@@ -1,12 +1,12 @@
 <h1 align="center">Weekend Warrior (API)</h1>
 
-<p align="center">This repository forms the API aspect of my wider 'Weekend Warriors' site. This README contains all the relevent information pertaining to the planning, structure and functionality of the back-end API. Please use the links below to navigate to other relevant sections of the project itself:<p>
+<p align="center">This repository forms the API aspect of my wider 'Weekend Warrior' app. This README contains all the relevent information pertaining to the planning, structure and functionality of the back-end API. Please use the links below to navigate to other relevant sections of the project itself:<p>
 
 [Deployed API Site](https://weekend-warrior-api.herokuapp.com)
 
 [Deployed Site](https://weekend-warrior-nickdevc.herokuapp.com)
 
-[Front-end Repository](https://github.com/NickdevC/weekend-warrior-nickdevc/)
+[Front-end Repository](https://github.com/NickdevC/weekend-warrior-react/)
 
 ---
   
